@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+.nav_Menu_style{
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #262626;
+}
+ul{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+ul li{
+    display: inline-block;
+    border-radius: 8px;
+    transition: .3s ease background-color;
+}
+ ul li:hover{
+    background-color: #1E1E1E;
+}
+ ul li a{
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+    color:  #BCB4B4;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    outline: none;
+}
+ul li .active{
+    color: rgb(255, 255, 255);
+}
+.mobile-menu-icon{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.2rem;
+    width: 4rem;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    color:  #ffffff;
+    font-size: 25px;
+}
+.closeNavIcon{
+    display: none;
+    color:  #ffffff;
+}
+@media (max-width: 768px) {
+    body{
+        margin-top: 50px;
+    }
+    .hide-item{
+        --top:1rem;
+        transform: translateY(calc(-100% var(--top)));
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block;
+    }
+    .navItems{
+        transition: .3s ease transform;
+        background-color: #1E1E1E;
+        padding: 2rem;
+        width: 90%;
+        max-width: 250px;
+        border-radius: 12px;
+        position: absolute;
+        right: 0.2rem;
+        top: 2px;
+    }
+    .closeNavIcon{
+        display: block;
+        width: 3rem;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+        font-size: 25px;
+       
+    }
+    ul li{
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
